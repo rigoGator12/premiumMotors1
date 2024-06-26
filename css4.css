@@ -1,0 +1,228 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+header {
+    background-color: #000000; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Alineación centrada */
+    position: relative; /* Posición relativa para efectos */
+    overflow: hidden; /* Ocultar desbordamiento */
+    transition: background-color 0.3s; /* Transición de color de fondo */
+    cursor: pointer; /* Cursor indicador de clic */
+}
+
+header::before {
+    content: ''; /* Contenido pseudo-elemento */
+    position: absolute; /* Posición absoluta */
+    bottom: 0; /* Alineación en la parte inferior */
+    left: 0; /* Alineación a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 2px; /* Altura del subrayado */
+    background-color: #fff; /* Color del subrayado */
+    transform: scaleX(0); /* Escala inicial del subrayado */
+    transform-origin: bottom left; /* Origen de la transformación */
+    transition: transform 0.3s ease; /* Transición de transformación */
+}
+
+header:hover::before {
+    transform: scaleX(1); /* Escala completa del subrayado al pasar el mouse */
+}
+
+header h1 {
+    margin: 0; /* Eliminar margen */
+    font-size: 2rem; /* Tamaño de fuente */
+    transition: color 0.3s; /* Transición de color suave */
+}
+
+header:hover {
+    background-color: #555; /* Cambio de color de fondo al pasar el mouse */
+}
+
+header:hover h1 {
+    color: #eee; /* Cambio de color de título al pasar el mouse */
+}
+
+/* Nav Styles */
+nav {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    background-color: #1A1C1C; /* Color de fondo */
+    padding: 10px 0; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    border-bottom: 2px solid #555; /* Borde inferior */
+    font-family: 'Arial', sans-serif; /* Familia de fuente */
+}
+
+nav a {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 10px; /* Margen horizontal */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+    position: relative; /* Posición relativa para efectos */
+}
+
+nav a::after {
+    content: ''; /* Contenido pseudo-elemento */
+    position: absolute; /* Posición absoluta */
+    bottom: 0; /* Alineación en la parte inferior */
+    left: 0; /* Alineación a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 2px; /* Altura del subrayado */
+    background-color: #fff; /* Color del subrayado */
+    transform: scaleX(0); /* Escala inicial del subrayado */
+    transform-origin: bottom left; /* Origen de la transformación */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+nav a:hover::after {
+    transform: scaleX(1); /* Escala completa del subrayado al pasar el mouse */
+}
+
+nav a:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de levantamiento */
+}
+
+/* Contenedor de las tarjetas de autos */
+#car-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Estilos de la tarjeta de auto */
+.car-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Estilos de la imagen del auto */
+.car-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s; /* Transición suave */
+}
+
+.car-card:hover img {
+    transform: scale(1.1); /* Zoom de la imagen al pasar el mouse */
+}
+
+/* Estilos de los detalles del auto */
+.car-details {
+    padding: 15px;
+}
+
+.car-details h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.car-details p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.car-details button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4CAF50; /* Verde estilo Xbox */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.car-details button:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de elevación al pasar el mouse */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000000; 
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 50px 0; /* Espacio interno */
+    font-family: 'Arial', sans-serif; /* Fuente específica */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /* Sombra debajo */
+}
+
+/* Contenedor para los elementos del footer */
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre elementos */
+    align-items: center;
+}
+
+/* Estilo para el título del footer */
+footer h3 {
+    font-size: 1.8rem; /* Tamaño de fuente grande */
+    margin-bottom: 10px;
+}
+
+/* Estilo para los enlaces del footer */
+footer a {
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    transition: opacity 0.3s; /* Transición de opacidad */
+}
+
+footer a:hover {
+    opacity: 0.8; /* Opacidad al pasar el mouse */
+}
+
+/* Estilo para la información de contacto */
+footer .contact-info {
+    font-size: 1.1rem; /* Tamaño de fuente */
+    color: #ccc; /* Texto gris claro */
+}
+
+/* Estilo para los íconos de redes sociales */
+footer .social-icons {
+    display: flex;
+    gap: 10px; /* Espacio entre íconos */
+}
+
+footer .social-icons a {
+    display: inline-block;
+    width: 40px; /* Tamaño de ícono */
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #3498db; /* Fondo azul claro */
+    color: #fff; /* Texto blanco */
+    border-radius: 50%; /* Borde redondeado */
+    transition: transform 0.3s, background-color 0.3s; /* Transiciones suaves */
+}
+
+footer .social-icons a:hover {
+    background-color: #2980b9; /* Cambio de color al pasar el mouse */
+    transform: scale(1.2); /* Escala al pasar el mouse */
+}

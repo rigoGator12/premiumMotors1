@@ -1,0 +1,439 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    background: #000000; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Alineación centrada */
+    padding: 20px 0; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    position: relative; /* Posición relativa para efectos */
+    overflow: hidden; /* Ocultar desbordamiento */
+    transition: background-color 0.3s; /* Transición de color de fondo */
+    cursor: pointer; /* Cursor indicador de clic */
+}
+
+header::before {
+    content: ''; /* Contenido pseudo-elemento */
+    position: absolute; /* Posición absoluta */
+    bottom: 0; /* Alineación en la parte inferior */
+    left: 0; /* Alineación a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 2px; /* Altura del subrayado */
+    background-color: #fff; /* Color del subrayado */
+    transform: scaleX(0); /* Escala inicial del subrayado */
+    transform-origin: bottom left; /* Origen de la transformación */
+    transition: transform 0.3s ease; /* Transición de transformación */
+}
+
+header:hover::before {
+    transform: scaleX(1); /* Escala completa del subrayado al pasar el mouse */
+}
+
+header h1 {
+    font-size: 2rem; /* Tamaño de fuente */
+    margin: 0; /* Eliminar margen */
+    transition: color 0.3s; /* Transición de color suave */
+}
+
+header:hover {
+    background-color: #555; /* Cambio de color de fondo al pasar el mouse */
+}
+
+header:hover h1 {
+    color: #eee; /* Cambio de color de título al pasar el mouse */
+}
+
+header img {
+    max-width: 10%; /* Ancho máximo */
+    height: 15%; /* Altura automática para mantener la proporción */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+header img:hover {
+    transform: scale(1.1); /* Escalado al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+}
+
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    background-color: #1A1C1C; /* Color de fondo */
+    padding: 10px 0; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    border-bottom: 2px solid #555; /* Borde inferior */
+    font-family: 'Arial', sans-serif; /* Familia de fuente */
+}
+
+nav a {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 10px; /* Margen horizontal */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+    position: relative; /* Posición relativa para efectos */
+}
+
+nav a::after {
+    content: ''; /* Contenido pseudo-elemento */
+    position: absolute; /* Posición absoluta */
+    bottom: 0; /* Alineación en la parte inferior */
+    left: 0; /* Alineación a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 2px; /* Altura del subrayado */
+    background-color: #fff; /* Color del subrayado */
+    transform: scaleX(0); /* Escala inicial del subrayado */
+    transform-origin: bottom left; /* Origen de la transformación */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+nav a:hover::after {
+    transform: scaleX(1); /* Escala completa del subrayado al pasar el mouse */
+}
+
+nav a:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de levantamiento */
+}
+
+/* Sección de Presentación */
+#presentacion {
+    background: white;
+    padding: 40px;
+    margin: 20px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+}
+
+#presentacion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+#presentacion h2 {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+#presentacion p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+/* Imagen de la Empresa */
+#imagenEm {
+    background: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#imagenEm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+#imagenEm .galeria-item {
+    flex: 1 1 calc(33% - 40px);
+    margin: 55px;
+
+}
+
+#imagenEm img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#imagenEm img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonios */
+.testimonios {
+    background: linear-gradient(135deg, #333, #555);
+    color: #f0f0f0;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonios:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.testimonios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.testimonios blockquote {
+    font-size: 1.4rem;
+    margin: 20px auto;
+    max-width: 800px;
+    position: relative;
+    padding-left: 20px;
+    text-align: left;
+    color: #ccc;
+}
+
+.testimonios blockquote:before {
+    content: "“";
+    font-size: 4rem;
+    position: absolute;
+    left: -20px;
+    top: -30px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s;
+}
+
+.testimonios blockquote:hover:before {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.testimonios cite {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #999;
+    transition: color 0.3s;
+}
+
+.testimonios cite:hover {
+    color: #ccc;
+}
+
+/* Formulario de Contacto */
+#formularioContacto {
+    padding: 30px;
+    background: #f0f0f0; /* Fondo gris claro */
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+#formularioContacto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    background: #e0e0e0; /* Cambio de color al pasar el mouse */
+}
+
+#formularioContacto h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#formularioContacto label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #555;
+}
+
+#formularioContacto input,
+#formularioContacto textarea {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#formularioContacto input[type="submit"] {
+    background-color: #c0c0c0; /* Plata */
+    color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#formularioContacto input[type="submit"]:hover {
+    background-color: #a0a0a0; /* Plata más oscuro al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de elevación */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Mapa */
+#mapa-container {
+    padding: 30px;
+    background: #f0f0f0; /* Fondo gris claro */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#mapa-container:hover {
+    background-color: #e0e0e0; /* Cambio de color al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+#mapa-container h2 {
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
+    color: #333; /* Texto oscuro */
+    margin-bottom: 20px;
+    transition: color 0.3s; /* Transición de color de texto */
+}
+
+#mapa-container:hover h2 {
+    color: #616265; /* Cambio de color de texto al pasar el mouse */
+}
+
+#mapa-container p {
+    font-size: 1.1rem; /* Tamaño de fuente más grande */
+    color: #666; /* Texto gris */
+    margin-bottom: 30px;
+}
+
+#mapa-container a {
+    display: inline-block;
+    padding: 12px 24px; /* Aumento del padding para mejor clicabilidad */
+    background-color: #007bff; /* Azul brillante */
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#mapa-container a:hover {
+    background-color: #1F1F22; /* Cambio de color al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de elevación más pronunciado */
+}
+
+
+/* Redes Sociales */
+#seccionRedesSociales {
+    background: linear-gradient(#DFDFE6); /* Fondo con gradiente */
+    padding: 40px 20px; /* Menos espacio vertical */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+#seccionRedesSociales h2 {
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
+    color: #1F1F1F; /* Texto blanco */
+    margin-bottom: 20px;
+}
+
+#seccionRedesSociales a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+#seccionRedesSociales a:hover {
+    transform: scale(1.2); /* Escala al pasar el mouse */
+    color: #fff; /* Cambio de color al pasar el mouse */
+}
+
+#seccionRedesSociales img {
+    width: 50px; /* Tamaño de imagen más grande */
+    height: 50px;
+    border-radius: 50%; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Footer */
+footer {
+    background-color: #000000; 
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 50px 0; /* Espacio interno */
+    font-family: 'Arial', sans-serif; /* Fuente específica */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /* Sombra debajo */
+}
+
+/* Contenedor para los elementos del footer */
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre elementos */
+    align-items: center;
+}
+
+/* Estilo para el título del footer */
+footer h3 {
+    font-size: 1.8rem; /* Tamaño de fuente grande */
+    margin-bottom: 10px;
+}
+
+/* Estilo para los enlaces del footer */
+footer a {
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    transition: opacity 0.3s; /* Transición de opacidad */
+}
+
+footer a:hover {
+    opacity: 0.8; /* Opacidad al pasar el mouse */
+}
+
+/* Estilo para la información de contacto */
+footer .contact-info {
+    font-size: 1.1rem; /* Tamaño de fuente */
+    color: #ccc; /* Texto gris claro */
+}
+
+/* Estilo para los íconos de redes sociales */
+footer .social-icons {
+    display: flex;
+    gap: 10px; /* Espacio entre íconos */
+}
+
+footer .social-icons a {
+    display: inline-block;
+    width: 40px; /* Tamaño de ícono */
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #3498db; /* Fondo azul claro */
+    color: #fff; /* Texto blanco */
+    border-radius: 50%; /* Borde redondeado */
+    transition: transform 0.3s, background-color 0.3s; /* Transiciones suaves */
+}
+
+footer .social-icons a:hover {
+    background-color: #2980b9; /* Cambio de color al pasar el mouse */
+    transform: scale(1.2); /* Escala al pasar el mouse */
+}
